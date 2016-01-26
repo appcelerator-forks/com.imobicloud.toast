@@ -44,8 +44,12 @@ function messageClick(e) {
   	hideMe();
 }
 
+var removed = false;
 function hideMe(e) {
-  	var container = $.getView(); 
-  	container.parent.remove(container);
-  	container.fireEvent('toast:hide');
+	if (!removed) {
+		removed = true;
+		var container = $.getView(); 
+	  	container.parent.remove(container);
+	  	container.fireEvent('toast:hide');
+	}
 }
