@@ -19,6 +19,7 @@ function init() {
 	} else {
 		$.icon.parent.remove($.icon);
 		$.icon = null;
+		$.addClass($.title.parent, 'toast-inner-noicon');
 	}
 	
 	if (args.title) {

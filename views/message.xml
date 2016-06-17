@@ -6,6 +6,7 @@
 				<Label id="title" class="toast-title"/>
 				<Label id="toastMessage" class="toast-message"/>
 			</View>
+			<Button class="toast-button"/>
 		</View>
 	</View>
 </Alloy>
