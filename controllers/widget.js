@@ -1,6 +1,6 @@
 var args = arguments[0] || {},
 	cancelHide = false,
-	hasGap = OS_IOS && parseInt(Ti.Platform.version, 10) >= 7 && args.hasNavBar == 'false';
+	hasGap = OS_IOS && args.hasNavBar == 'false';
 
 init();
 function init() {
@@ -14,7 +14,7 @@ function init() {
  	message: '', // required
  	
  	type: 'error', // success, error, info
- 	duration: 3000,
+ 	duration: 3000, // duration == 0 will disable auto hide
  	title: '',
 	callback: function(e){},
 	timeout: function(e){},

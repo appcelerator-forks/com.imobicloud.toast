@@ -31,7 +31,9 @@ function init() {
 	
 	$.toastMessage.text = args.message;
 	
-	timer = setTimeout(messageTimeout, args.duration || 3000);
+	if (args.duration != 0) {
+		timer = setTimeout(messageTimeout, args.duration || 3000);
+	}
 }
 
 function messageTimeout() {
